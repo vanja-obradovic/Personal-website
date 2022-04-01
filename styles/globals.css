@@ -1,5 +1,40 @@
 @import url("https://fonts.googleapis.com/css?family=Lobster Two");
 
+@media screen and (max-width: 1000px) {
+  img {
+    transform: scale(0.85);
+    transition: transform 500ms ease-in-out;
+    border-radius: 1rem;
+    position: relative;
+    height: 60vh;
+  }
+
+  .details {
+    width: 90vw !important;
+    height: calc(180vh / 3) !important;
+    opacity: 0;
+    background-color: rgba(187, 187, 187, 0.514);
+    position: absolute;
+    transform: scale(0.85);
+    transition: 500ms ease-in-out;
+    z-index: 5;
+    border-radius: 1rem;
+    font-family: "Lobster Two";
+    font-size: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  .details_wrapper {
+    flex-grow: 1;
+    height: 60vh !important;
+    width: 90vw !important;
+  }
+}
+
 html,
 body {
   padding: 0;
@@ -7,6 +42,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-image: url("/blue-gradient.png");
+  width: 100vw;
+  height: 100vh;
 }
 
 * {
@@ -78,6 +115,7 @@ img {
 }
 
 .details_wrapper {
+  height: 80vh;
   flex-grow: 1;
   width: 33%;
 }
@@ -89,11 +127,10 @@ img {
   align-items: center;
   font-size: 4rem;
   color: aliceblue;
+  height: 10vh;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,8 +1,27 @@
+@media screen and (max-width: 1000px) {
+  .navbar_elems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  height: 10%;
 }
 
 .navbar_elems {
