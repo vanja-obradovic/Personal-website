@@ -1,0 +1,5 @@
+.maindiv {
+  display: flex;
+  height: 80vh;
+  justify-content: space-around;
+}
