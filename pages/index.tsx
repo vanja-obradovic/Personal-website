@@ -5,12 +5,10 @@ import navbarStyle from "../styles/navbar.module.css";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className="page_wrapper">
       <header className="home_header">Vanja Obradovic</header>
 
-      <main>
-        <Body />
-      </main>
+      <Body />
 
       <Footer />
     </div>
