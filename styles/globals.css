@@ -1,14 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata");
 
-@media screen and (max-width: 1000px) {
-  .card_wrapper {
-    height: 60vh !important;
-    width: 90vw !important;
-  }
-
-  .details {
-    font-size: 200% !important;
-  }
+* {
+  box-sizing: border-box;
 }
 
 html,
@@ -18,17 +11,14 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-image: url("/blue-gradient.png");
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .page_wrapper {
-  position: relative;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
   height: 100vh;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 li {
@@ -58,74 +48,6 @@ a:hover {
   height: 125%;
 }
 
-img {
-  opacity: 1;
-  transition: 1500ms ease-in-out;
-  border-radius: 1rem;
-  position: absolute;
-}
-
-.details {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  background-color: rgba(210, 210, 210, 0.8);
-  position: absolute;
-  transform: rotateY(180deg);
-  z-index: 5;
-  border-radius: 1rem;
-  font-family: "Inconsolata";
-  font-size: 300%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-}
-
-/* .card_wrapper:hover .details {
-  opacity: 1;
-  transform: rotateY(180deg);
-  cursor: pointer;
-}
-
-.card_wrapper:hover img {
-  transform: rotateY(180deg);
-  opacity: 0;
-  cursor: pointer; 
-}*/
-
-.card_wrapper:hover .card_wrapper_inner {
-  transform: rotateY(180deg) translateX(-100%);
-  transform-origin: center left;
-}
-
-.card_wrapper:hover .details {
-  opacity: 1;
-  transition: opacity 500ms ease-in-out;
-  transition-delay: 500ms;
-}
-
-.card_wrapper:hover img {
-  opacity: 0.25;
-}
-
-.card_wrapper {
-  height: 80vh;
-  flex-grow: 1;
-  width: 33%;
-  perspective: 1000px;
-  transform: scale(0.85);
-}
-
-.card_wrapper_inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: 1000ms ease-in-out;
-  transform-style: preserve-3d;
-}
-
 .home_header {
   font-family: "Inconsolata";
   display: flex;
@@ -136,15 +58,34 @@ img {
   height: 10vh;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
+.start {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  height: 10vh;
-  width: 100%;
-  font-size: 100%;
-  font-style: italic;
+  text-align: center;
+  height: 100vh;
+  font-weight: 500;
+  font-size: 4rem;
+  font-family: "Inconsolata";
   color: aliceblue;
+  overflow-y: auto;
+}
+
+.start_arrow {
+  width: 50px;
+  height: 50px;
+  filter: invert();
+  animation: bounce 1000ms ease-in-out 1s infinite alternate;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  100% {
+    transform: translateY(25px) rotateY(180deg);
+  }
+
+  0% {
+    transform: translateY(-25px);
+  }
 }

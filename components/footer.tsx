@@ -1,8 +1,12 @@
-import Link from "next/link";
+import styles from "../styles/footer.module.css";
 import moment from "moment";
 
 const Footer = () => {
-  return <footer>{moment().format("hh:mm DD-MM-YYYY")}</footer>;
+  return (
+    <footer className={styles.page_footer}>
+      {moment().format("hh:mm DD-MM-YYYY")}
+    </footer>
+  );
 };
 
 export default Footer;
