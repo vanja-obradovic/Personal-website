@@ -6,7 +6,8 @@ import { useRouter } from "next/router";
 
 const MyFirstBlogPost: NextPage = () => {
   const router = useRouter();
-  const { title, summary, date, tags } = JSON.parse(router.query.object);
+  const query: String = new String(router.query.object);
+  const { title, summary, date, tags } = JSON.parse(query.toString());
 
   return (
     <div className="postPage">
@@ -14,7 +15,7 @@ const MyFirstBlogPost: NextPage = () => {
       <div className="postPageHeader">
         <p>{moment(date).format("hh:mm, Do MMMM YYYY")} </p>
         <div className="tag_wrapper">
-          {tags.map((tag, index) => (
+          {tags.map((tag: string, index: number) => (
             <Link href="/" key={index}>
               <p key={index} className="tags postPageTag">
                 {tag}
