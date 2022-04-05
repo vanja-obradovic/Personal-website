@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata");
 
+@media screen and (max-width: 1000px) {
+  .start > h1 {
+    width: auto !important;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -27,7 +33,7 @@ li {
   height: 1.75rem;
 }
 
-a {
+/* a {
   text-decoration: none;
   background-color: aliceblue;
   border-radius: 2rem;
@@ -46,6 +52,16 @@ a {
 a:hover {
   filter: invert();
   height: 125%;
+} */
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+  transition: border 500ms ease-in-out;
+}
+a:hover {
+  border-bottom: aliceblue;
+  border-bottom-style: solid;
 }
 
 .home_header {
@@ -66,10 +82,14 @@ a:hover {
   text-align: center;
   height: 100vh;
   font-weight: 500;
-  font-size: 4rem;
+  font-size: 200%;
   font-family: "Inconsolata";
   color: aliceblue;
   overflow-y: auto;
+}
+
+.start > h1 {
+  width: 50%;
 }
 
 .start_arrow {
@@ -88,4 +108,84 @@ a:hover {
   0% {
     transform: translateY(-25px);
   }
+}
+
+.blogPostCard {
+  width: 60%;
+  height: auto;
+  border-radius: 1rem;
+  background-color: aliceblue;
+  padding-inline: 0.5rem;
+  padding-block: 0.2rem;
+  cursor: pointer;
+  transition: transform 350ms cubic-bezier(0.01, 1.24, 1, 1);
+}
+
+.blogPostCard:hover {
+  background-color: rgb(201, 229, 253);
+  transform: scaleX(0.98);
+}
+
+.blogPostCard > h3 {
+  margin: 0;
+}
+
+.blogPostCardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 80vh;
+  row-gap: 1rem;
+}
+
+.tag_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+.tag_wrapper > p {
+  margin: 0 0 0.25rem 0;
+}
+
+.tags {
+  border-radius: 50px;
+  background-color: gainsboro;
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+  cursor: pointer;
+}
+
+.tags:hover {
+  background-color: rgb(196, 196, 196);
+}
+
+.postPageTag {
+  background-color: aliceblue;
+  color: black;
+}
+
+.postPageTag:hover {
+  background-color: rgb(201, 229, 253);
+}
+
+.postPage {
+  color: aliceblue;
+  margin-left: 3rem;
+  height: 100vh;
+}
+
+.postPageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.rightArrow {
+  transform: rotateZ(90deg);
+  width: 10%;
+  height: 10%;
 }

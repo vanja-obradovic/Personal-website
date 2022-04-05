@@ -1,14 +1,13 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
 const About: NextPage = () => {
   return (
-    <div>
+    <div className="page_wrapper">
       <Header />
-
-      <main>About</main>
-
+      About page
       <Footer />
     </div>
   );

@@ -4,7 +4,7 @@ import Header from "../components/header";
 
 const Contact: NextPage = () => {
   return (
-    <div>
+    <div className="page_wrapper">
       <Header />
 
       <main>Contact</main>
