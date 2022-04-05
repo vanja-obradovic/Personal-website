@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import { myPosts } from "../util/myPosts";
 import PostCard from "../components/PostCard";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Blog: NextPage = () => {
   return (
