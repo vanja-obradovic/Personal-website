@@ -1,19 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/link-passhref */
 
-import Posts from "../models/Posts";
+import Post from "../models/Post";
 import Link from "next/link";
 
 const PostCard = ({
   post: { id, title, summary, date, tags },
 }: {
-  post: Posts;
+  post: Post;
 }) => {
   return (
     <Link
       href={{
         pathname: `blog/${date.year()}/${date.month() + 1}/${title}`,
-        query: { object: JSON.stringify({ title, summary, date, tags }) },
+        query: { id: id },
       }}
     >
       <div className="blogPostCard">

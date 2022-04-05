@@ -2,8 +2,8 @@
 /* eslint-disable @next/next/link-passhref */
 import type { NextPage } from "next";
 import Link from "next/link";
-import Cards from "../components/cards";
-import Footer from "../components/footer";
+import Cards from "../components/Cards";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -20,9 +20,9 @@ const Home: NextPage = () => {
           </Link>
         </div>
       </div>
-      {/* <section > */}
+
       <Cards />
-      {/* </section> */}
+
       <Footer />
     </div>
   );

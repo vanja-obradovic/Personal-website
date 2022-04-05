@@ -1,7 +1,7 @@
 import { Moment } from "moment";
 
 export default class Posts {
-  id: number | void;
+  id: number;
   title: string;
   summary: string;
   date: Moment;

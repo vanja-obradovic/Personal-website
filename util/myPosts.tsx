@@ -1,7 +1,7 @@
 import moment from "moment";
-import Posts from "../models/Posts";
+import Post from "../models/Post";
 
-function* IdGen() {
+function* IdGen(): Generator<number, number, unknown> {
   let i = 0;
   while (true) {
     yield i++;
@@ -10,7 +10,7 @@ function* IdGen() {
 
 var gen = IdGen();
 
-export const myPosts: Posts[] = [
+export const myPosts: Post[] = [
   {
     id: gen.next().value,
     title: "MyFirstBlogPost",
