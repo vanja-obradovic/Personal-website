@@ -6,7 +6,7 @@ const About: NextPage = () => {
   return (
     <div className="page_wrapper">
       <Header />
-      About page
+      About me page
       <Footer />
     </div>
   );
