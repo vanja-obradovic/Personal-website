@@ -5,7 +5,7 @@ import Posts from "../models/Posts";
 import Link from "next/link";
 
 const PostCard = ({
-  post: { title, summary, date, tags },
+  post: { id, title, summary, date, tags },
 }: {
   post: Posts;
 }) => {

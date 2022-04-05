@@ -6,8 +6,10 @@ import { useRouter } from "next/router";
 
 const MyFirstBlogPost: NextPage = () => {
   const router = useRouter();
-  const query: String = new String(router.query.object);
-  const { title, summary, date, tags } = JSON.parse(query.toString());
+  if (router.query.object === undefined) return <div></div>;
+  const query: string = router.query.object!.toString();
+
+  const { title, summary, date, tags } = JSON.parse(query);
 
   return (
     <div className="postPage">
