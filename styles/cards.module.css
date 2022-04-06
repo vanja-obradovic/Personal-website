@@ -1,9 +1,3 @@
-@media screen and (orientation: landscape) {
-  .cards_wrapper {
-    flex-direction: row;
-  }
-}
-
 @media screen and (max-width: 1000px) {
   .cards_wrapper {
     flex-direction: column;
@@ -18,6 +12,12 @@
 
   .details {
     font-size: 200% !important;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .cards_wrapper {
+    flex-direction: row;
   }
 }
 
