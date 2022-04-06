@@ -10,8 +10,8 @@ const About: NextPage = () => {
       <div className="about_contact_text">
         <h1>Who am I?</h1>
         <p>
-          My name is Vanja Obradovic and I'm a CS student. I'm currently working
-          on some small projects to gain experience.
+          My name is Vanja Obradovic and I&#39;m a CS student. I&#39;m currently
+          working on some small projects to gain experience.
         </p>
         <p>My current areas of interest are:</p>
         <div className="image_container">
