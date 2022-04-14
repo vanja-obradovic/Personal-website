@@ -14,10 +14,9 @@ const PostCard: FC<PostCardProps> = ({ post }) => {
   return (
     <Link
       href={{
-        pathname: `blog/${date.year()}/${date.month() + 1}/${title.replaceAll(
-          " ",
-          "_"
-        )}`,
+        pathname: `blog/${date.year()}/${date.month() + 1}/${title
+          .split(" ")
+          .join("_")}`,
         query: { id: id },
       }}
     >
