@@ -20,19 +20,28 @@ const Contact: NextPage = () => {
           <p>
             <label>
               Your Name:{" "}
-              <input type="text" name="name" className="input_style" />
+              <input type="text" name="name" className="input_style" required />
             </label>
           </p>
           <p>
             <label>
               Your Email:{" "}
-              <input type="email" name="email" className="input_style" />
+              <input
+                type="email"
+                name="email"
+                className="input_style"
+                required
+              />
             </label>
           </p>
           <p className="input_text">
             <label className="textarea_wrapper">
               Message:{" "}
-              <textarea name="message" className="input_textarea"></textarea>
+              <textarea
+                name="message"
+                className="input_textarea"
+                required
+              ></textarea>
             </label>
           </p>
           <p>
