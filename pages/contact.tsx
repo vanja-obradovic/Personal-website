@@ -9,7 +9,31 @@ const Contact: NextPage = () => {
       <Header />
       <div className="about_contact_text">
         <h1>Contact</h1>
-        <p>Work in progress</p>
+        <form name="contact" method="POST" data-netlify="true">
+          <p>
+            <label>
+              Your Name:{" "}
+              <input type="text" name="name" className="input_style" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your Email:{" "}
+              <input type="email" name="email" className="input_style" />
+            </label>
+          </p>
+          <p className="input_text">
+            <label>
+              Message:{" "}
+              <textarea name="message" className="input_textarea"></textarea>
+            </label>
+          </p>
+          <p>
+            <button type="submit" className="submit_btn">
+              Send
+            </button>
+          </p>
+        </form>
       </div>
       <Footer />
     </div>
