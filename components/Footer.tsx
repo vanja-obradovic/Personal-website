@@ -1,7 +1,7 @@
 import styles from "../styles/footer.module.css";
-import moment from "moment";
+import { FC } from "react";
 
-const Footer = () => {
+const Footer: FC = () => {
   return <footer className={styles.page_footer}>© Vanja Obradovic 2022</footer>;
 };
 

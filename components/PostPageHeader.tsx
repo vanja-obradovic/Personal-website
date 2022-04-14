@@ -3,17 +3,18 @@
 
 import Link from "next/link";
 import Posts from "../models/Post";
+import { FC } from "react";
 
-const PostPageHeader = ({
-  post: { id, title, summary, date, tags },
-}: {
+type PostPageHeaderProps = {
   post: Posts;
-}) => {
+};
+const PostPageHeader: FC<PostPageHeaderProps> = ({ post }) => {
+  const { id, title, summary, date, tags } = post;
   return (
     <div>
       <h1>{title}</h1>
       <div className="postPageHeader">
-        <p>{date.format("hh:mm, Do MMMM YYYY")} </p>
+        <p>{date.format("HH:mm, Do MMMM YYYY")} </p>
         <div className="tag_wrapper">
           {tags.map((tag: string, index: number) => (
             <Link href="/" key={index}>

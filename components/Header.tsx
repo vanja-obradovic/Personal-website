@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/link-passhref */
 import Link from "next/link";
+import { FC } from "react";
 import navbarStyle from "../styles/navbar.module.css";
 
-const Header = () => {
+const Header: FC = () => {
   return (
     <header className={navbarStyle.navbar}>
       <Link href="/#card_section">

@@ -1,26 +1,25 @@
-/* eslint-disable @next/next/link-passhref */
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import { myPosts } from "../../../../util/myPosts";
+import { myPosts } from "../../../../utils/myPosts";
 import Post from "../../../../models/Post";
 import PostPageHeader from "../../../../components/PostPageHeader";
 
-const MyFirstBlogPost: NextPage = () => {
+const Choosing_a_hosting_provider: NextPage = () => {
   const router = useRouter();
+
   const query = router.query.id;
-  const id = parseInt((Array.isArray(query) ? query[0] : query) ?? "0");
+  const id = parseInt((Array.isArray(query) ? query[0] : query) ?? "-1");
 
   const post: Post = myPosts[id];
-
   if (post === undefined) return null;
 
   return (
     <div className="postPage">
       <PostPageHeader post={post} />
       <hr />
-      <div>neki tekst</div>
+      <div>Neki tekst 2</div>
     </div>
   );
 };
 
-export default MyFirstBlogPost;
+export default Choosing_a_hosting_provider;

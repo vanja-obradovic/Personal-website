@@ -2,8 +2,9 @@
 /* eslint-disable @next/next/link-passhref */
 import Link from "next/link";
 import styles from "../styles/cards.module.css";
+import { FC } from "react";
 
-const Cards = () => {
+const Cards: FC = () => {
   return (
     <div className={styles.cards_wrapper} id="card_section">
       <Link href="/blog">

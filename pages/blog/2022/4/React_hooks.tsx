@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import { myPosts } from "../../../../util/myPosts";
+import { myPosts } from "../../../../utils/myPosts";
 import Post from "../../../../models/Post";
 import PostPageHeader from "../../../../components/PostPageHeader";
 
-const MySecondBlogPost: NextPage = () => {
+const React_hooks: NextPage = () => {
   const router = useRouter();
 
   const query = router.query.id;
@@ -17,9 +17,9 @@ const MySecondBlogPost: NextPage = () => {
     <div className="postPage">
       <PostPageHeader post={post} />
       <hr />
-      <div>Neki tekst 2</div>
+      <div>Neki tekst 4</div>
     </div>
   );
 };
 
-export default MySecondBlogPost;
+export default React_hooks;
