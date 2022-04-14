@@ -13,7 +13,7 @@ const Contact: NextPage = () => {
           name="contact"
           method="POST"
           data-netlify="true"
-          action="/submitOk"
+          action="/submitok"
         >
           <p>
             <label>
