@@ -9,7 +9,12 @@ const Contact: NextPage = () => {
       <Header />
       <div className="about_contact_text">
         <h1>Contact</h1>
-        <form name="contact" method="POST" data-netlify="true">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          action="/submitOk"
+        >
           <p>
             <label>
               Your Name:{" "}
@@ -23,7 +28,7 @@ const Contact: NextPage = () => {
             </label>
           </p>
           <p className="input_text">
-            <label>
+            <label className="textarea_wrapper">
               Message:{" "}
               <textarea name="message" className="input_textarea"></textarea>
             </label>

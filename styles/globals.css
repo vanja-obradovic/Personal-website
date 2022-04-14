@@ -236,15 +236,21 @@ a:hover {
 }
 
 .input_text {
-  width: 50%;
-  height: 25%;
+  width: auto;
   display: flex;
   flex-direction: column;
 }
 
 .input_textarea {
   width: 50%;
-  height: 100%;
+  height: 10rem;
+}
+
+.textarea_wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  row-gap: 0.5rem;
 }
 
 .submit_btn {
