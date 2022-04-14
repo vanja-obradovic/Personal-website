@@ -14,7 +14,9 @@ const Contact: NextPage = () => {
           method="POST"
           data-netlify="true"
           action="/submitok"
+          netlify-honeypot="bot-field"
         >
+          <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>
               Your Name:{" "}
