@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-const submitOk: NextPage = () => {
+const submitok: NextPage = () => {
   return (
     <div
       className="page_wrapper"
@@ -22,4 +22,4 @@ const submitOk: NextPage = () => {
   );
 };
 
-export default submitOk;
+export default submitok;
